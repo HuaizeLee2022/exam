@@ -10,11 +10,15 @@ public class Product {
     //商品類別
     String category;
 
-    public Product(String name, double price, int quantity, String category) {
+
+    String state;
+
+    public Product(String name, double price, int quantity, String category,String state) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.category = category;
+        this.state = state;
     }
 
     public String getName() {
@@ -50,6 +54,14 @@ public class Product {
     }
     public double getTotalPrice() {
         return price * quantity;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
 }
